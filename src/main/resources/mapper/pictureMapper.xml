@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="matsk.picturebed.DAO.pictureDao">
+
+    <insert id="insertPicture" parameterType="picture" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO picture(
+            id,
+            originalname,
+            md5,
+            uploadtime,
+            url,
+            generatedname,
+            suffix
+        ) VALUES(
+            #{id},
+            #{originalname},
+            #{md5},
+            #{uploadtime},
+            #{url},
+            #{generatedname},
+            #{suffix}
+        )
+    </insert>
+
+    <select id="verifyPictureExistsByMd5" resultType="picture" parameterType="java.lang.String">
+        SELECT * FROM picture
+        WHERE md5 = #{md5}
+    </select>
+
+    <select id="getPictureByName" resultType="picture" parameterType="java.lang.String">
+        SELECT * FROM picture
+        WHERE generatedname = #{generatedname}
+    </select>
+
+    <select id="searchPictureByName" resultType="picture" parameterType="java.lang.String">
+        SELECT * FROM picture
+        WHERE originalname
+        LIKE CONCAT('%',#{searchname},'%')
+    </select>
+
+    <select id="searchPictureByMd5" resultType="picture" parameterType="java.lang.String">
+        SELECT * FROM picture
+        WHERE md5 = #{md5}
+    </select>
+
+    <select id="searchPictureByTime" resultType="picture">
+        SELECT * FROM picture
+        WHERE uploadtime
+        BETWEEN #{start} AND #{end}
+    </select>
+</mapper>

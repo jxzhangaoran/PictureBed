@@ -1,0 +1,190 @@
+#searchselection {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.searchouter {
+	text-align: center;
+	
+}
+
+.searchcontainer {
+	box-shadow: 0 0 .5rem gray;
+	display: inline-block;
+	width: 100%;
+	height: 150px;
+	border-radius: 20px;
+	background-color: whitesmoke;
+	transition: all .3s;
+	cursor: pointer;
+}
+
+.searchcontainer:hover {
+	box-shadow: 0 0 .8rem gray;
+	transform: translateY(-15px);
+}
+
+.searchpic {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin-top: 50px;
+	margin-left: -10%;
+}
+
+.searchpic img {
+	width: 100%;
+	height: 100%;
+}
+
+.searchword {
+	display: inline-block;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 10%;
+	font-size: 1.2rem;
+}
+
+.hide {
+	display: none;
+}
+
+#namediv,#timedivpc,#timedivm {
+	width: 100%;
+	height: 10rem;
+	text-align: center;
+}
+
+.roundborder {
+	display: inline-block;
+	height: 3rem;
+	border: 2px solid dimgray;
+	border-radius: 3rem;
+	width: 70%;
+}
+
+.roundborder input {
+	display: inline-block;
+	height: 1.5rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-top: .6rem;
+	margin-left: 0rem;
+	border: none;
+	outline: none;
+	width: 90%;
+}
+
+.roundborder img {
+	display: inline-block;
+	height: 1.5rem;
+	width: auto;
+	margin-top: -.2rem;
+	margin-left: 2%;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+	.searchouter {
+		margin-bottom: 2rem;
+	}
+	
+	.roundborder img {
+		margin-left: 2%;
+	}
+	
+	.roundborder input {
+		width: 80%;
+	}
+	
+	.searchdiscribe h1 {
+		font-size: 1.2rem !important;
+	}
+	
+	.searchdiscribe h3 {
+		font-size: .5rem !important;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#resultdiv {
+		min-height: 100px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.roundborder img {
+		margin-left: 4%;
+	}
+	
+	.roundborder input {
+		width: 70%;
+	}
+}
+
+#preload_container {
+	position: relative;
+	width: 50%;
+	height: 50px;
+}
+
+#resultdiv p {
+	font-size: .8rem !important;
+	color: dimgray !important;
+}
+
+.searchdiscribe {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.searchdiscribe h1 {
+	font-size: 2rem;
+}
+
+.searchdiscribe h3 {
+	font-size: 1rem;
+}
+
+.card {
+	transition: all .3s;
+}
+
+.card:hover {
+	transform: scale(1.05,1.05);
+}
+
+#timedivm {
+	display: none;
+}
+
+#timeend, #timestart {
+	margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+	#timedivpc {
+		display: none;
+	}
+	
+	#timedivm {
+		display: block;
+		min-height: 250px;
+	}
+	
+	#timedivm input {
+		font-size: .75rem;
+	}
+}
+
+#timesearchmbtncontainer {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1.2rem;
+}
+
+#timemclear {
+	margin-right: 1rem;
+}
+

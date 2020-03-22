@@ -1,0 +1,42 @@
+html {
+	font-size: 20px;
+}
+
+#logo {
+	display: inline-block;
+}
+
+#logopng {
+	height: 1.8rem;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.link-icon {
+	height: 1.2rem;
+	display: inline-block;
+	vertical-align: middle;
+	filter: invert(100%);
+}
+
+
+footer {
+	background-color: lightgray;
+	font-size: .8rem;
+}
+
+.footera {
+	color: #83757D;
+}
+
+.footera:hover {
+	text-decoration: none;
+}
+
+main {
+	margin-bottom: 3rem;
+}
+
+#footercontent {
+	text-align: center;
+}

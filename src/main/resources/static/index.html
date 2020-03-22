@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="vendor/themes/explorer-fas/theme.min.css" />
+		<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="vendor/css/fileinput.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>欢迎 | 秀图床</title>
+		<script src="vendor/js/jquery-3.4.1.min.js"></script>
+		<script src="vendor/js/popper.min.js"></script>
+		<script src="vendor/js/bootstrap.min.js"></script>
+		<script src="vendor/js/fileinput.min.js"></script>
+		<script src="vendor/themes/fas/theme.min.js"></script>
+		<script src="vendor/themes/explorer-fas/theme.min.js"></script>
+		<script src="vendor/js/zh.js"></script>
+		<script src="vendor/js/spark-md5.min.js"></script>
+		<script src="vendor/layer/layer.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar navbar-dark bg-primary navbar-expand-lg ">
+				<div class="navbar-brand" id="logo">
+					<img src="img/logo.png" alt="秀图床图片" id="logopng" />
+				</div>
+				<a class="navbar-brand" href="index.html">秀图床</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">
+								<img src="img/home.png" class="link-icon" alt="主页图片" />
+								&nbsp;首页　
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="search.html">
+								<img src="img/search.png" class="link-icon" alt="搜索图片" />
+								&nbsp;搜索　
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">
+								<img src="img/about.png" class="link-icon" alt="关于图片" />
+								&nbsp;关于　
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="jumbotron jumbotron-fluid" id="homepagejumbotron">
+				<div class="container">
+					<h1 class="display-3">欢迎使用<br id="sm-br"/>秀图床</h1>
+					<p class="lead">永久免费、开源、高速的图床服务站</p>
+					<hr class="my-4" id="jumbotronhr" size="5">
+					<p>支持多图上传、拖拽上传，一次上传，永久使用。仅需1分钟，生成你的个性化图片资源链接。</p>
+					<p class="lead">
+						<a class="btn btn-primary btn-lg" href="#upload" role="button" id="startuse">开始使用</a>
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<a name="upload"></a>
+					<div class="col-12" id="uploadcontainer">
+						 <input type="file" id="fileinput" multiple />
+					</div>
+				</div>
+		</main>
+		<footer class="footer mt-auto py-3">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-12" id="footercontent">
+					  <span class="text-muted">2020　
+						<a href="http://mtk.pub" target="_blank" class="footera">mtk.pub　</a>
+						<a href="https://github.com/jxzhangaoran" target="_blank" class="footera">GitHub　</a>
+						<a href="https://gitee.com/Matsk" target="_blank" class="footera">码云　</a>
+						<a href="http://www.beian.miit.gov.cn/" target="_blank" class="footera">赣ICP备20002190号　</a>
+					  </span>
+				  </div>
+			  </div>
+		  </div>
+		</footer>
+	</body>
+</html>

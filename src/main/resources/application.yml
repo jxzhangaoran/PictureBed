@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: picturebed  #数据库名
+    url: jdbc:mysql://localhost:3306/picturebed?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong&allowPublicKeyRetrieval=true&useSSL=false #url
+    username: USER  #用户名
+    password: USER  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
+    type: com.alibaba.druid.pool.DruidDataSource #使用druid数据源
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  type-aliases-package: matsk.picturebed.Pojo
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    use-generated-keys: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    root: error

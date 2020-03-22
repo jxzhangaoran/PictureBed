@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="vendor/themes/explorer-fas/theme.min.css" />
+		<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="vendor/css/fileinput.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/search.css" />
+		<link rel="stylesheet" href="css/preloadanimate.css" />
+		<title>搜索 | 秀图床</title>
+		<script src="vendor/js/jquery-3.4.1.min.js"></script>
+		<script src="vendor/js/popper.min.js"></script>
+		<script src="vendor/js/bootstrap.min.js"></script>
+		<script src="vendor/js/fileinput.min.js"></script>
+		<script src="vendor/themes/fas/theme.min.js"></script>
+		<script src="vendor/themes/explorer-fas/theme.min.js"></script>
+		<script src="vendor/js/zh.js"></script>
+		<script src="vendor/js/spark-md5.min.js"></script>
+		<script src="vendor/layer/layer.js"></script>
+		<script src="vendor/laydate/laydate.js"></script>
+		<script src="js/search.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar navbar-dark bg-primary navbar-expand-lg ">
+				<div class="navbar-brand" id="logo">
+					<img src="img/logo.png" alt="秀图床图片" id="logopng" />
+				</div>
+				<a class="navbar-brand" href="index.html">秀图床</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">
+								<img src="img/home.png" class="link-icon" alt="主页图片" />
+								&nbsp;首页　
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="search.html">
+								<img src="img/search.png" class="link-icon" alt="搜索图片" />
+								&nbsp;搜索　
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">
+								<img src="img/about.png" class="link-icon" alt="关于图片" />
+								&nbsp;关于　
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<div class="row" id="searchselection">
+					<div class="col-lg-4 col-xs-120 searchouter" id="timesearch">
+						<div class="searchcontainer" data-searchtype="timebody">
+							<div class="searchpic">
+								<img src="img/timesearch.png" />
+							</div>
+							<div class="searchword">
+								按上传时间搜索
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-12 searchouter" id="namesearch">
+						<div class="searchcontainer" data-searchtype="namebody">
+							<div class="searchpic">
+								<img src="img/namesearch.png" />
+							</div>
+							<div class="searchword">
+								按图片名称搜索
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-xs-12 searchouter" id="picsearch">
+						<div class="searchcontainer" data-searchtype="picbody">
+							<div class="searchpic">
+								<img src="img/picsearch.png" />
+							</div>
+							<div class="searchword">
+								以图搜图
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<a name="searchtag"></a>
+				<div class="row">
+					<div class="col-12">
+						<div class="searchbody hide" id="timebody">
+							<div class="searchdiscribe">
+								<h1>输入时间范围以查找图片</h1>
+								<h3>时间范围需要在一个月之内，请回忆您的上传时间。</h3>
+							</div>
+							<!-- pc端 -->
+							<div id="timedivpc">
+								<div class="roundborder" id="timeselector">
+									<input type="text" id="timeinputpc" placeholder="请选择时间范围..." autocomplete="off"/>
+									<img src="img/dosearch.png" id="dotimesearch" />
+								</div>
+							</div>
+							<!-- 移动端 -->
+							<div id="timedivm">
+								<div class="roundborder" id="timestart">
+									<input type="text" id="timeinputm1" placeholder="请选择起始时间..." autocomplete="off"/>
+								</div>
+								<div class="roundborder" id="timeend">
+									<input type="text" id="timeinputm2" placeholder="请选择截止时间..." autocomplete="off"/>
+								</div>
+								<div id="timesearchmbtncontainer">
+									<button type="button" id="timemclear" class="btn btn-outline-primary">清空</button>
+									<button type="button" id="timemsubmit" class="btn btn-primary">搜索</button>
+								</div>
+							</div>
+						</div>
+						<div class="searchbody" id="namebody">
+							<div class="searchdiscribe">
+								<h1>输入图片名称以查找图片</h1>
+								<h3>支持模糊搜索，请输入您上传时的图片原文件名。</h3>
+							</div>
+							<div id="namediv">
+								<div id="picnameinputdiv" class="roundborder">
+									<input type="text" id="picnameinput" placeholder="example.jpg" autocomplete="off" />
+									<img src="img/dosearch.png" id="donamesearch" />
+								</div>
+							</div>
+						</div>
+						<div class="searchbody hide" id="picbody">
+							<div class="searchdiscribe">
+								<h1>在下面选择您想查找的图片文件</h1>
+								<h3>无需上传，系统会自动为您匹配数据相同的图片文件，不受图片名称限制</h3>
+							</div>
+							<div id="fileinputcontainer">
+								<input type="file" id="fileinput" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<a name="resulttag"></a>
+				<div class="row" id="resultdiv">
+					<div class="col-12">
+						<div id="preload_container" class="hide">
+							<div id="preloader_1">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer mt-auto py-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-12" id="footercontent">
+						<span class="text-muted">2020　
+							<a href="http://mtk.pub" target="_blank" class="footera">mtk.pub　</a>
+							<a href="https://github.com/jxzhangaoran" target="_blank" class="footera">GitHub　</a>
+							<a href="https://gitee.com/Matsk" target="_blank" class="footera">码云　</a>
+							<a href="http://www.beian.miit.gov.cn/" target="_blank" class="footera">赣ICP备20002190号　</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

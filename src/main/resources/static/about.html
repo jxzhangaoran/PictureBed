@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/about.css" />
+		<link rel="stylesheet" href="vendor/css/layui.css" />
+		<title>关于 | 秀图床</title>
+		<script src="vendor/js/jquery-3.4.1.min.js"></script>
+		<script src="vendor/js/popper.min.js"></script>
+		<script src="vendor/js/bootstrap.min.js"></script>
+		<script src="vendor/laycode/layui.js"></script>
+		<script src="vendor/laycode/code.js"></script>
+		<script src="js/about.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar navbar-dark bg-primary navbar-expand-lg ">
+				<div class="navbar-brand" id="logo">
+					<img src="img/logo.png" alt="秀图床图片" id="logopng" />
+				</div>
+				<a class="navbar-brand" href="index.html">秀图床</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">
+								<img src="img/home.png" class="link-icon" alt="主页图片" />
+								&nbsp;首页　
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="search.html">
+								<img src="img/search.png" class="link-icon" alt="搜索图片" />
+								&nbsp;搜索　
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="about.html">
+								<img src="img/about.png" class="link-icon" alt="关于图片" />
+								&nbsp;关于　
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<div class="row" id="introduce">
+					<div class="col-12">
+						<div id="whatis">
+							<h1 class="eachtitle">什么是图床</h1>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<h3>定义：</h3>
+								<br>
+								<p>
+									图床一般是指储存图片的服务器，有国内和国外之分。
+									国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。
+									国内也分为单线空间、多线空间和cdn加速三种。图床就是专门用来存放图片，
+									同时允许你把图片对外连接的网上空间，不少图床都是免费的。</p>
+								<br>
+								<p style="float: right;">——来自<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin"
+									 style="font-style: italic" target="_blank">百度百科</a></p>
+								<br>
+							</blockquote>
+						</div>
+						<hr class="introducedivider" />
+						<div id="howtouse">
+							<h1 class="eachtitle">如何使用</h1>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<br />
+								<p>您只需要在本站上传或查询一张想要使用的图片，然后复制链接到您的代码段中即可。如：</p>
+								<br />
+								<pre class="layui-code">
+									//插入图片
+									&lt;img src='在本站上传或查找到的图片资源URL' alt='图片描述' title='图片名称' id='图片id'&nbsp;/&gt;
+									//使用jQuery修改图片链接
+									$('#图片id').attr('src','在本站上传或查找到的图片资源URL');
+								</pre>
+							</blockquote>
+						</div>
+						<hr class="introducedivider" />
+						<div id="techstack">
+							<h1 class="eachtitle">项目技术栈</h1>
+							<div class="row">
+								<div class="col-lg-3 col-md-6 col-xs-12 techpart">
+									<hr class="md-show" />
+									<h3 class="techtitle">项目构建</h3>
+									<p class="techcontent">
+										<img src="img/techlogo/maven.ico" class="techlogo" />Maven</p>
+								</div>
+
+								<div class="col-lg-3 col-md-6 col-xs-12 techpart">
+									<hr class="md-show" />
+									<h3 class="techtitle">前端</h3>
+									<p class="techcontent">
+										<img src="img/techlogo/bootstrap.ico" class="techlogo" />Bootstrap</p>
+									<p class="techcontent">
+										<img src="img/techlogo/layui.ico" class="techlogo" />LayUI</p>
+									<p class="techcontent">
+										<img src="img/techlogo/jquery.ico" class="techlogo" />jQuery</p>
+									<p class="techcontent">
+										<img src="img/techlogo/bootstrapfileinput.ico" class="techlogo" />Bootstrap Fileinput</p>
+								</div>
+
+								<div class="col-lg-3 col-md-6 col-xs-12 techpart">
+									<hr class="md-show" />
+									<h3 class="techtitle">后端和数据库</h3>
+									<p class="techcontent">
+										<img src="img/techlogo/SpringBoot.ico" class="techlogo" />SpringBoot</p>
+									<p class="techcontent">
+										<img src="img/techlogo/mybatis.ico" class="techlogo" />MyBatis</p>
+									<p class="techcontent">
+										<img src="img/techlogo/mysql.ico" class="techlogo" />MySQL 8.0</p>
+								</div>
+								<hr class="md-show" />
+								<div class="col-lg-3 col-md-6 col-xs-12 techpart">
+									<hr class="md-show" />
+									<h3 class="techtitle">开发工具</h3>
+									<p class="techcontent">
+										<img src="img/techlogo/jetbrains.png" class="techlogo" />Intellij IDEA Ultimate Edition</p>
+									<p class="techcontent">
+										<img src="img/techlogo/hbuilderx.png" class="techlogo" />HBuilderX</p>
+									<p class="techcontent">
+										<img src="img/techlogo/navicat.png" class="techlogo" />Navicat Premium 15</p>
+								</div>
+							</div>
+						</div>
+						<hr class="introducedivider" />
+						<div id="aboutme">
+							<h1 class="eachtitle">关于作者</h1>
+							<blockquote class="layui-elem-quote layui-quote-nm">
+								<p>一位来自211渣本的软件工程学生，立志于从事Java开发行业（头发日渐稀疏）
+								<br>以此项目来熟悉SpringBoot前后端分离式开发，初学可能会有不少bug，性能和用户交互上也可能会有考虑不周全的地方，
+								<br>望使用时多多包涵：）也希望自己的技术能更上一层楼。奥利给！
+								
+								</p>
+								<p style="float: right;">——作者于2020年3月14日</p>
+								<br />
+							</blockquote>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer mt-auto py-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-12" id="footercontent">
+						<span class="text-muted">2020　
+							<a href="http://mtk.pub" target="_blank" class="footera">mtk.pub　</a>
+							<a href="https://github.com/jxzhangaoran" target="_blank" class="footera">GitHub　</a>
+							<a href="https://gitee.com/Matsk" target="_blank" class="footera">码云　</a>
+							<a href="http://www.beian.miit.gov.cn/" target="_blank" class="footera">赣ICP备20002190号　</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

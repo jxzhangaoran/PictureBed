@@ -1,0 +1,86 @@
+#homepagejumbotron {
+	color: white;
+	background-image: url(../img/homepage-background.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: backgroundZoom 60s linear infinite;
+}
+
+#jumbotronhr {
+	height: .05rem;
+	background-color: white !important;
+}
+
+#sm-br {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+	
+	#homepagejumbotron {
+		animation: none;
+	}
+	
+	#sm-br {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	html {
+		font-size: 15px;
+	}
+
+}
+
+@keyframes backgroundZoom {
+	0%{
+		background-size: 100% 100%;
+	}
+	50%{
+		background-size: 150% 100%;
+	}
+	100%{
+		background-size: 100% 100%;
+	}
+}
+
+@-ms-keyframes backgroundZoom {
+	0%{
+		background-size: 100% 100%;
+	}
+	50%{
+		background-size: 150% 100%;
+	}
+	100%{
+		background-size: 100% 100%;
+	}
+}
+
+@-moz-keyframes backgroundZoom {
+	0%{
+		background-size: 100% 100%;
+	}
+	50%{
+		background-size: 150% 100%;
+	}
+	100%{
+		background-size: 100% 100%;
+	}
+}
+
+@-webkit-keyframes backgroundZoom {
+	0%{
+		background-size: 100% 100%;
+	}
+	50%{
+		background-size: 150% 100%;
+	}
+	100%{
+		background-size: 100% 100%;
+	}
+}
