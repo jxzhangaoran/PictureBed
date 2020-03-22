@@ -6,6 +6,8 @@ A picture bed service based on SpringBoot.
 Upload your image to the server and acquire a URL to the image resource.
 You may search images via name,upload time or just another image(MD5 matching).
 
+DDL&DML file is included.See picturebed.sql.
+
 backstage:
 -SpringBoot
 -MyBatis
